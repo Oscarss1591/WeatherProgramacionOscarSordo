@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="es">
+<link rel="manifest" href="manifest.json">
+<meta name="theme-color" content="#1e40af">
+<head>
+
+<!-- 🔤 Configuración básica de caracteres -->
+<meta charset="UTF-8">
+
+<!-- 📱 Responsive en móviles -->
+<meta name="viewport" content="width=device-width,initial-scale=1.0">
+
+
+<!-- 🔍 SEO: título de la página -->
+<title>Weather App | Clima en tiempo real por ciudades</title>
+
+<!-- 🔍 SEO: descripción para Google -->
+<meta name="description" content="Consulta el tiempo en cualquier ciudad en tiempo real. Ver clima actual, temperatura y previsión de 6 días.">
+
+<!-- 🔍 SEO: palabras clave -->
+<meta name="keywords" content="clima, tiempo, weather app, previsión del tiempo, ciudades">
+
+
+<!-- 🎨 Color de la barra del navegador en móviles -->
+<meta name="theme-color" content="#1e40af">
+
+
+<!-- 🌐 OPEN GRAPH (cuando compartes el link en WhatsApp, etc.) -->
+<meta property="og:title" content="Weather App - Clima en tiempo real">
+<meta property="og:description" content="Consulta el tiempo de cualquier ciudad al instante con previsión de 6 días.">
+<meta property="og:type" content="website">
+<meta property="og:image" content="https://tu-dominio.com/preview.png">
+<meta property="og:url" content="https://tu-dominio.com">
+
+
+<!-- 🐦 Tarjeta de Twitter/X -->
+<meta name="twitter:card" content="summary_large_image">
+
+
+<!-- 🎨 Archivo de estilos -->
+<link rel="stylesheet" href="styles.css">
+
+</head>
+
+
+<body>
+
+<!-- 📦 CONTENEDOR PRINCIPAL DE TODA LA APP -->
+<div class="app">
+
+
+<!-- 🧭 CABECERA SUPERIOR -->
+<header class="top-bar">
+
+<!-- Título de la app -->
+<h1 aria-label="Weather App - aplicación del tiempo">
+☀ Weather App
+</h1>
+
+
+<!-- 🔎 FORMULARIO DE BÚSQUEDA -->
+<form class="search-box" role="search" aria-label="Buscar ciudad">
+
+
+
+<!-- Input donde el usuario escribe la ciudad -->
+<input
+type="text"
+id="cityInput"
+placeholder="Buscar ciudad..."
+aria-label="Introduce una ciudad para consultar el clima"
+autocomplete="off"
+/>
+
+<!-- Botón para enviar búsqueda -->
+<button type="submit" aria-label="Buscar clima de la ciudad">
+Buscar
+</button>
+
+</form>
+
+</header>
+
+
+<!-- 📊 CONTENIDO PRINCIPAL -->
+<main id="main" class="dashboard">
+
+
+<!-- 🌤 SECCIÓN: CLIMA ACTUAL -->
+<section class="weather-card" aria-label="Clima actual">
+
+<!-- Nombre de la ciudad -->
+<h2 aria-live="polite">Oviedo</h2>
+
+<!-- Icono del clima (decorativo) -->
+<div class="weather-icon" aria-hidden="true">
+☁
+</div>
+
+<!-- Temperatura actual -->
+<div class="temperature" aria-label="Temperatura actual">
+18°
+</div>
+
+<!-- Estado del clima -->
+<p class="status" aria-live="polite">
+Parcialmente nublado
+</p>
+
+
+<!-- 📌 DETALLES EXTRA DEL CLIMA -->
+<div class="details" aria-label="Detalles del clima">
+
+
+<!-- HUMEDAD -->
+<div class="detail" role="group" aria-label="Humedad">
+
+<!-- icono decorativo -->
+<span aria-hidden="true">💧</span>
+
+<!-- valor -->
+<p>80%</p>
+
+<!-- etiqueta -->
+<small>Humedad</small>
+
+</div>
+
+
+<!-- VIENTO -->
+<div class="detail" role="group" aria-label="Viento">
+
+<span aria-hidden="true">💨</span>
+
+<p>15 km/h</p>
+
+<small>Viento</small>
+
+</div>
+
+
+<!-- SENSACIÓN TÉRMICA -->
+<div class="detail" role="group" aria-label="Sensación térmica">
+
+<span aria-hidden="true">🌡</span>
+
+<p>20°</p>
+
+<small>Sensación</small>
+
+</div>
+
+</div>
+
+</section>
+
+
+<!-- 📅 SECCIÓN: PRÓXIMOS DÍAS -->
+<section class="forecast-panel" aria-label="Pronóstico de próximos días">
+
+<!-- Título de sección -->
+<h3>Próximos días</h3>
+
+
+<!-- GRID DE DÍAS -->
+<div class="forecast-grid">
+
+
+<!-- DÍA 1 -->
+<div class="day-card" role="group" aria-label="Lunes">
+<p>Lun</p>
+<span aria-hidden="true">☀</span>
+<strong>22°</strong>
+</div>
+
+
+<!-- DÍA 2 -->
+<div class="day-card" role="group" aria-label="Martes">
+<p>Mar</p>
+<span aria-hidden="true">🌧</span>
+<strong>17°</strong>
+</div>
+
+
+<!-- DÍA 3 -->
+<div class="day-card" role="group" aria-label="Miércoles">
+<p>Mié</p>
+<span aria-hidden="true">☁</span>
+<strong>19°</strong>
+</div>
+
+
+<!-- DÍA 4 -->
+<div class="day-card" role="group" aria-label="Jueves">
+<p>Jue</p>
+<span aria-hidden="true">☀</span>
+<strong>24°</strong>
+</div>
+
+
+<!-- DÍA 5 -->
+<div class="day-card" role="group" aria-label="Viernes">
+<p>Vie</p>
+<span aria-hidden="true">🌦</span>
+<strong>18°</strong>
+</div>
+
+
+<!-- DÍA 6 -->
+<div class="day-card" role="group" aria-label="Sábado">
+<p>Sáb</p>
+<span aria-hidden="true">⛈</span>
+<strong>16°</strong>
+</div>
+
+</div>
+
+</section>
+
+</main>
+
+</div>
+
+
+<!-- 📜 ARCHIVO JAVASCRIPT (lógica de la app) -->
+<script src="app.js"></script>
+
+</body>
+</html>
